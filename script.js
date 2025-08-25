@@ -21,7 +21,16 @@ async function loadAlbums() {
         cardContainer.innerHTML = "";
         songUl.innerHTML = "";
 
-        data.albums.forEach(album => {
+        for (const album of data.albums) {
+            // Fetch info.json for album
+            let info = { title: album.name, descriptions: "" }; // default
+            try {
+                const infoResp = await fetch(`${album.songs[0].split("/").slice(0, -1).join("/")}/info.json`);
+                info = await infoResp.json();
+            } catch (err) {
+                console.warn(`info.json not found for ${album.name}, using default`);
+            }
+
             // Create album card
             const card = document.createElement("div");
             card.classList.add("card", "rounded", "cursor");
@@ -30,13 +39,14 @@ async function loadAlbums() {
             card.innerHTML = `
                 <img class="img" src="images/play-button-arrowhead.png" alt="">
                 <img class="rounded" src="${album.cover}" alt="">
-                <h4>${album.name}</h4>
+                <h4>${info.title}</h4>
+                <p>${info.descriptions}</p>
             `;
             cardContainer.appendChild(card);
 
             // On card click → list songs
             card.addEventListener("click", () => displayAlbumSongs(album));
-        });
+        }
 
         // **Default load first album**
         if (data.albums.length > 0) {
