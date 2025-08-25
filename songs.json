@@ -1,0 +1,68 @@
+{
+  "albums": [
+    {
+      "name": "Bright_(mood)",
+      "cover": "songs/Bright_(mood)/cover.jpg",
+      "songs": [
+        "songs/Bright_(mood)/Charlie Puth - Attention [Official Video].mp3",
+        "songs/Bright_(mood)/Ed Sheeran - Shape of You (Lyrics).mp3",
+        "songs/Bright_(mood)/Luis Fonsi - Despacito ft. Daddy Yankee.mp3",
+        "songs/Bright_(mood)/Ruth B. - Dandelions (Lyrics) (Slowed + Reverb).mp3",
+        "songs/Bright_(mood)/The Kid LAROI, Justin Bieber - STAY (Official Video).mp3"
+      ]
+    },
+    {
+      "name": "chill_(mood)",
+      "cover": "songs/chill_(mood)/cover.jpg",
+      "songs": [
+        "songs/chill_(mood)/Luis Fonsi - Despacito ft. Daddy Yankee.mp3",
+        "songs/chill_(mood)/Ruth B. - Dandelions (Lyrics) (Slowed + Reverb).mp3",
+        "songs/chill_(mood)/The Kid LAROI, Justin Bieber - STAY (Official Video).mp3"
+      ]
+    },
+    {
+      "name": "cs",
+      "cover": "songs/cs/cover.jpg",
+      "songs": [
+        "songs/cs/Rain Over Kyoto Station - The Mini Vandals.mp3",
+        "songs/cs/Shadowstep - The Mini Vandals - Copy.mp3"
+      ]
+    },
+    {
+      "name": "Dark_(mood)",
+      "cover": "songs/Dark_(mood)/cover.jpg",
+      "songs": [
+        "songs/Dark_(mood)/Abdul Hannan - Haaray _ Prod by Shahmeer Raza Khan (Official Music Video).mp3",
+        "songs/Dark_(mood)/Siyah - Perfectly Slowed + Reverb _ Abdul Hanan.mp3"
+      ]
+    },
+    {
+      "name": "Karan aujila",
+      "cover": "songs/Karan aujila/cover.jpg",
+      "songs": [
+        "songs/Karan aujila/Drifting Memories - The Mini Vandals.mp3",
+        "songs/Karan aujila/Floating Lanterns - The Mini Vandals.mp3",
+        "songs/Karan aujila/Rain Over Kyoto Station - The Mini Vandals - Copy.mp3",
+        "songs/Karan aujila/Shadowstep - The Mini Vandals - Copy.mp3"
+      ]
+    },
+    {
+      "name": "Love_(mood)",
+      "cover": "songs/Love_(mood)/cover.jpg",
+      "songs": [
+        "songs/Love_(mood)/Abdul Hannan - Haaray _ Prod by Shahmeer Raza Khan (Official Music Video).mp3",
+        "songs/Love_(mood)/Ava Max - Sweet but Psycho (Lyrics).mp3",
+        "songs/Love_(mood)/Chaand Baaliyan – Aditya A. _ Trending Song _ Official Video.mp3",
+        "songs/Love_(mood)/Pal Pal Lyrics - Afusic prod. by AliSoomroMusic.mp3"
+      ]
+    },
+    {
+      "name": "ncs",
+      "cover": "songs/ncs/cover.jpg",
+      "songs": [
+        "songs/ncs/Akatsuki Rising - The Mini Vandals.mp3",
+        "songs/ncs/Nonstop Arjit Singh Mashup _ Remix _ Saturday Special _ Lofi Boy.mp3"
+      ]
+    }
+  ]
+}
