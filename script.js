@@ -35,32 +35,42 @@ async function loadAlbums() {
             cardContainer.appendChild(card);
 
             // On card click → list songs
-            card.addEventListener("click", () => {
-                songs = album.songs.map(s => s); // copy songs
-                songUl.innerHTML = "";
-                songs.forEach(songPath => {
-                    const li = document.createElement("li");
-                    li.innerHTML = `
-                        <div class="flex">
-                            <img class="invert" src="images/music.svg" alt="">
-                            <div class="info">
-                                <div>${decodeURI(songPath.split("/").pop())}</div>
-                            </div>
-                        </div>
-                        <img class="invert" src="images/play.svg" alt="">
-                    `;
-                    li.addEventListener("click", () => {
-                        currentIndex = songs.indexOf(songPath);
-                        playMusic(songPath);
-                    });
-                    songUl.appendChild(li);
-                });
-            });
+            card.addEventListener("click", () => displayAlbumSongs(album));
         });
+
+        // **Default load first album**
+        if (data.albums.length > 0) {
+            displayAlbumSongs(data.albums[0]);
+        }
 
     } catch (error) {
         console.error("Error loading albums:", error);
     }
+}
+
+// Display songs of an album
+function displayAlbumSongs(album) {
+    const songUl = document.querySelector(".song-list ul");
+    songs = album.songs.map(s => s); // copy songs
+    currentIndex = 0;
+    songUl.innerHTML = "";
+    songs.forEach(songPath => {
+        const li = document.createElement("li");
+        li.innerHTML = `
+            <div class="flex">
+                <img class="invert" src="images/music.svg" alt="">
+                <div class="info">
+                    <div>${decodeURI(songPath.split("/").pop())}</div>
+                </div>
+            </div>
+            <img class="invert" src="images/play.svg" alt="">
+        `;
+        li.addEventListener("click", () => {
+            currentIndex = songs.indexOf(songPath);
+            playMusic(songPath);
+        });
+        songUl.appendChild(li);
+    });
 }
 
 // Play a song
